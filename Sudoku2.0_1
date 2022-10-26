@@ -2,7 +2,7 @@ import pygame
 import requests
 
 width = 550
-background = (251, 247, 245)
+background = (255, 255, 255)
 grid_origin_color = (52, 31, 151)
 
 response = requests.get("https://sugoku.herokuapp.com/board?difficulty=easy")
