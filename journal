@@ -1,0 +1,26 @@
+jour 1 : C'est le début des vacances pour le moment mon objectif est de faire apparaitre la grille via Pygame grace à la vidéo (lien dans mon read_me) 
+         mais je sais pas si je vais pouvoir le faire en deux jour car après je part à Tenerife et je pourrais pas ramener mon ordi, bon faisont comme ça et 
+         on improvisera à la marche
+
+jour 3 : Bon, ça marche pas... je comprend pas ou je me trompe et je suis practiquement sur d'avoir suivit les instruccion à la lettre mais la page pygame reste en blanc 
+         et je ne comprend pas pourquoi!!! Bon je vais demander et je verais ce qui va pas.
+         
+         On m'a enfin répondu et punaise je veux littéralment péter mon ordi maintenant en réalité ma seule erreur at que j'ai oubliée de mettre "pygame.display.flip()"
+         à la fin de mon programme et donc du coup tous ce que j'avais écris sur le programme ne se dessinait pas sur la page, normale que ça ne fontionne pas!!!
+         
+         Enfin bref je crois que je vais devoir en rester la pour le moment mais bon jai pas trop le choix on ma interdit de prendre mon ordi avec moi et si ma mémoire
+         est bonne le wifi à l'hotel ou on va n'est pas trop top donc du coup jaurais du mal à continuer à écrire mon programme. Au moin je pourrais un peu calmer 
+         mon esprit et analyser la segonde partie du code qui permet de modifier les valeur de la grille.
+         
+         
+Jour 11 : Bon je suis de retour et même si mentalement ça m'a fait un grand bien, je crois pas que se soit le cas académiquement, j'ai le sentiment d'avoir tout oublier 
+          mais bon faudra faire avec.
+         
+          Premier test et... ça marche pas, sans surprise mais bon je vais essayer de voir ou je me trompe et essayer de le régler.
+         
+Jour 14 : J'ai réussi à régler le problème et punaise je devais vraiment être dans la lune quand j'étais en train d'écrire cet partie du programme, mais la n'est pas ma 
+          crainte... J'AI PAS FINIS MON PROGRAMME ET ON DOIT LE MONTRER AUJOURD'HUI JE SUIS DANS LA MERDE!!!!!
+          
+          Je suis quelqu'un d'athé mais franchement j'ai vraiment envie de remercier tout les dieux existants, M. Buonocore n'a pas noté les programmes aujourd'hui donc du 
+          coup j'ai un peux plus de temp. Il m'a même donnée quelque conseille pour améliorer mon programme. Enfin c'est pas encore fini je dois terminer mon programme pour 
+          qu'il soit jouable. Espérons que je l'aurais fini d'ici la.
