@@ -11,32 +11,36 @@ grid = response.json()['board']
 grid_origin = [[grid[x][y] for y in range(len(grid[0]))]for x in range(len(grid))]
 
 def insert(win, position):
+    print("insert Ok")
     i,j = position[1], position[0]
     monfont = pygame.font.SysFont('Comic Sans MS', 35)
     
-    while True:
+    sortie = False
+    while sortie == False :
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                return
+                sortie = True
             if event.type == pygame.KEYDOWN:
                 if (grid_origin[i-1][j-1] != 0):
-                    return
+                    sortie = True
                 if (event.key == 48): # Nous vérifions avec 0
                     grid[i-1][j-1] = event.key - 48
                     pygame.draw.rect(win, background, (position[0]*50 + buffer, position[1]*50 + buffer, 50 - 2*buffer, 50 - 2*buffer))
                     pygame.display.update()
-                    return
+                    sortie = True
                 if ( 0 < event.key - 48 < 10): # Nous vérifions avec des entrés valides
                     pygame.draw.rect(win, background, (position[0]*50 + buffer, position[1]*50 + buffer, 50 - 2*buffer, 50 - 2*buffer))
                     value = monfont.render(str(event.key - 48), True, (0, 0, 0))
                     win.blit(value, (position[0]*50 + 15, position[1]*50))
                     grid[i-1][j-1] = event.key - 48
                     pygame.display.update()
-                    return
-                return
+                    sortie = True
+                return 
 
 def main():
     pygame.init()
+    response = requests.get("https://sugoku.herokuapp.com/board?difficulty=easy") #Générateur automatique de Sudoku
+    grid = response.json()['board']
     win = pygame.display.set_mode((width, width))
     pygame.display.set_caption("Sudoku")
     win.fill(background)
@@ -68,6 +72,7 @@ def main():
             if event.type == pygame.QUIT :
                 pygame.quit()
                 return
+        
         pygame.display.flip() #Fait apparaitre la grille avec les valeur sur la page
         
-main()  
+main()    
