@@ -11,6 +11,12 @@ grid = response.json()['board']
 grid_origin = [[grid[x][y] for y in range(len(grid[0]))]for x in range(len(grid))]
 
 def insert(win, position):
+""" C'est la partie qui va faire tourner le jeu et permet de modifier les cases vides.
+    Il verifie bien dabord que la valeur inserée et entre 1 et 9.
+    Mais pour une raison que j'ignore celui-ci ne veux pas modifier les valeurs lorsque 
+    je clique sur une case vide
+"""
+
     print("insert Ok")
     i,j = position[1], position[0]
     monfont = pygame.font.SysFont('Comic Sans MS', 35)
@@ -38,6 +44,12 @@ def insert(win, position):
                 return 
 
 def main():
+""" c'est le coeur du projet, avec le lien du générateur de bibliothèque de sudoku,
+    celui-ci va dabord dessiner la grille grace à pygame et ensuite inserera les valeurs de 
+    la bibliothèque et pour finir, on a la fontion qui permet de cliquer sur une des cases vides
+    et de modifier ce vide qui est en réalité un zéro devenu invisible.
+"""
+
     pygame.init()
     response = requests.get("https://sugoku.herokuapp.com/board?difficulty=easy") #Générateur automatique de Sudoku
     grid = response.json()['board']
