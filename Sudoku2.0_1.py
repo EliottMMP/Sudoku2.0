@@ -11,11 +11,11 @@ grid = response.json()['board']
 grid_origin = [[grid[x][y] for y in range(len(grid[0]))]for x in range(len(grid))]
 
 def insert(win, position):
-""" C'est la partie qui va faire tourner le jeu et permet de modifier les cases vides.
-    Il verifie bien dabord que la valeur inserée et entre 1 et 9.
-    Mais pour une raison que j'ignore celui-ci ne veux pas modifier les valeurs lorsque 
-    je clique sur une case vide
-"""
+    """ C'est la partie qui va faire tourner le jeu et permet de modifier les cases vides.
+        Il verifie bien dabord que la valeur inserée et entre 1 et 9.
+        Mais pour une raison que j'ignore celui-ci ne veux pas modifier les valeurs lorsque 
+        je clique sur une case vide
+       """
 
     print("insert Ok")
     i,j = position[1], position[0]
